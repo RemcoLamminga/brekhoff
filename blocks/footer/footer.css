@@ -1,0 +1,46 @@
+/* Styles for the footer block */
+
+/* Minimalistische footer styling */
+.footer-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px;  /* Pas de grootte van de iconen aan */
+    color: #333;      /* Kleur voor de iconen */
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-links a:hover {
+    color: #0073e6;  /* Hover kleur voor de links */
+}

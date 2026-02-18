@@ -1,0 +1,48 @@
+/* Styles for the header block */
+/* Zorg ervoor dat de header zich goed uitstrekt over de breedte van de pagina */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logo aan de linkerkant */
+.logo a {
+    display: block;
+    max-width: 200px;  /* Optioneel, stel een maximale breedte in voor het logo */
+}
+
+.site-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menu aan de rechterkant */
+.menu {
+    text-align: right;
+}
+
+.header-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.header-menu li {
+    display: inline;
+    margin-left: 20px;  /* Ruimte tussen de menu-items */
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #333;  /* Zorg ervoor dat de tekstkleur zichtbaar is */
+    font-size: 16px;  /* Pas het lettertype aan */
+    font-weight: 600;  /* Optioneel, voor een iets vetter lettertype */
+}
+
+/* Hover-effect voor menu-items */
+.header-menu a:hover {
+    color: #0073e6;  /* Verander de kleur bij hover (gebruik een kleur die past bij jouw huisstijl) */
+}

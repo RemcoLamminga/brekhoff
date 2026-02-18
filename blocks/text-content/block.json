@@ -1,0 +1,18 @@
+{
+    "name": "acf/text-content",
+    "title": "Text Content",
+    "description": "A custom text content block that uses ACF fields.",
+    "style": [ "file:./text-content.css" ],
+    "script": [ "file:./text-content.js" ],
+    "category": "formatting",
+    "icon": "star-filled",
+    "keywords": ["text", "content"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "text-content.php",
+        "validate": "false"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "acf/header",
+    "title": "header",
+    "description": "A custom header block that uses ACF fields.",
+    "style": [ "file:./header.css" ],
+    "script": [ "file:./header.js" ],
+    "category": "formatting",
+    "icon": "star-filled",
+    "keywords": ["text", "content", "header"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "header.php",
+        "validate": "false"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

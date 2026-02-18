@@ -1,0 +1,11 @@
+html :where(.wp-block){
+    max-width: 100%;
+}
+
+.block-editor__container img{
+    max-width: unset;
+}
+
+html :where(.editor-styles-wrapper){
+    font-family: var(--font-family);
+}

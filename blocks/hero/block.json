@@ -1,0 +1,18 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "A custom hero block that uses ACF fields.",
+    "style": [ "file:./hero.css" ],
+    "script": [ "file:./hero.js" ],
+    "category": "formatting",
+    "icon": "star-filled",
+    "keywords": ["hero", "banner"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero.php",
+        "validate": "false"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
