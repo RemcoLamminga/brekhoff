@@ -4,8 +4,8 @@
     "description": "A custom footer block that uses ACF fields.",
     "style": [ "file:./footer.css" ],
     "script": [ "file:./footer.js" ],
-    "category": "formatting",
-    "icon": "star-filled",
+    "category": "footers",
+    "icon": "align-full-width",
     "keywords": ["text", "content", "footer"],
     "acf": {
         "mode": "preview",

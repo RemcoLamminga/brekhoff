@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-tekst",
+  "title": "Content Tekst",
+  "description": "A custom content-tekst block that uses ACF fields.",
+  "style": ["file:./content-tekst.css"],
+  "script": ["file:./content-tekst.js"],
+  "category": "inhoud",
+  "icon": "text",
+  "keywords": ["text", "content", "content-tekst"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-tekst.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

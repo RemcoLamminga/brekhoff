@@ -1,0 +1,138 @@
+/**
+ * Styles for the Content Tekst Afbeelding block.
+ */
+
+/* ================================
+   CONTENT TEKST AFBEELDING BLOCK
+   ================================ */
+
+.section_bg-light {
+    background: var(--background-color);
+}
+
+.content-tekst-afbeelding .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-tekst-afbeelding__inner {
+    display: flex;
+    align-items: stretch;
+    gap: 90px;
+}
+
+.content-tekst-afbeelding--margin-0 {
+    margin-top: 0 !important;
+}
+
+
+/* --------------------------------
+   Afbeeldingskolom
+----------------------------------- */
+.content-tekst-afbeelding__image {
+    flex: 1;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    /* zodat image altijd mooi staat */
+    max-width: 560px;
+    box-shadow:
+        0 8px 10px -6px rgba(0, 0, 0, 0.1),
+        0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* --------------------------------
+   Tekstkolom
+----------------------------------- */
+.content-tekst-afbeelding__content {
+    flex: 1;
+    display: flex;
+    padding: 40px 0px;
+}
+
+.content-tekst-afbeelding__title {
+    margin-top: 34px;
+}
+
+.content-tekst-afbeelding__content-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content-tekst-afbeelding__text {
+    margin-top: 36px;
+    display: grid;
+    gap: 28px;
+}
+
+.content-tekst-afbeelding__button:hover {
+    background: #163b6d;
+}
+
+/* --------------------------------
+   LAYOUT SCHAKELAAR (links/rechts)
+----------------------------------- */
+
+.layout-left .content-tekst-afbeelding__image {
+    order: 1;
+    max-width: 560px;
+}
+
+.layout-left .content-tekst-afbeelding__content {
+    order: 2;
+    max-width: 550px;
+}
+
+.layout-right .content-tekst-afbeelding__image {
+    order: 2;
+    max-width: 550px;
+}
+
+.layout-right .content-tekst-afbeelding__content {
+    order: 1;
+    max-width: 560px;
+}
+
+/* --------------------------------
+   Responsive
+----------------------------------- */
+
+@media (max-width: 1024px) {
+    .content-tekst-afbeelding__inner {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0px 20px;
+    }
+
+    /* Op mobiel altijd afbeelding boven */
+    .content-tekst-afbeelding__image {
+        order: 2 !important;
+        min-height: 360px;
+    }
+
+    .content-tekst-afbeelding__content {
+        order: 1 !important;
+        padding:0px;
+    }
+
+    
+}
+
+
+@media (max-width: 600px) {
+    .content-tekst-afbeelding__title {
+        font-size: 26px;
+    }
+
+    .content-tekst-afbeelding__text {
+        font-size: 16px;
+    }
+}

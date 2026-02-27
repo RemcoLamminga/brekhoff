@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-contact",
+  "title": "Content Contact",
+  "description": "A custom content-contact block that uses ACF fields.",
+  "style": ["file:./content-contact.css"],
+  "script": ["file:./content-contact.js"],
+  "category": "inhoud",
+  "icon": "format-aside",
+  "keywords": ["text", "content", "content-contact"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-contact.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

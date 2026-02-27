@@ -1,0 +1,183 @@
+/**
+ * Styles for the Content Tarieven block.
+ */
+
+/* Root-scope vars (optioneel) */
+
+/* ====== BLOCK WRAPPER ====== */
+
+
+.content-tarieven__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+.content-tarieven__title {
+    margin: 0 auto;
+    max-width: 789px;
+}
+
+.content-tarieven__content {
+    margin: 0 auto;
+    max-width: 655px;
+    margin-top: 20px;
+
+}
+
+/* ====== GRID ====== */
+.content-tarieven__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+}
+
+
+@media (max-width: 1024px) {
+    .content-tarieven__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .content-tarieven__cards {
+        grid-template-columns:  1fr;
+    }
+}
+
+
+
+/* ====== CARD ====== */
+.content-tarieven__card {
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 8px;
+    padding: 32px;
+    text-align: center;
+    transition: box-shadow .2s ease;
+}
+
+.content-tarieven__card:hover {
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
+
+}
+
+.content-tarieven__card-header {}
+
+.content-tarieven__card-title {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--tarif-font);
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+/* Price styling zoals in screenshot */
+.content-tarieven__card-price {}
+
+.content-tarieven__card-price-amount {
+    font-family: var(--tarif-font);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: var(--text-color);
+
+}
+
+.content-tarieven__card-price-sub {
+    font-size: 13px;
+    color: var(--ct-color-muted);
+}
+
+.content-tarieven__card-text {
+
+    font-family: var(--tarif-font);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing:0;
+    
+}
+
+/* Checklist */
+.content-tarieven__card-checklist {
+    list-style: none;
+    padding: 0;
+    margin: calc(32px - 8px) 0 calc(82px - 8px); /* -8px gap card */
+    display: grid;
+    gap: 16px;
+}
+
+.content-tarieven__card-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.content-tarieven__card-check-icon {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* Footer + Button */
+.content-tarieven__card-footer {
+    padding: 0;
+}
+
+.content-tarieven__button,
+.content-tarieven__card-footer .content-tarieven__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+
+    padding: 10px 0px;
+    border-radius: 999px;
+    background: var(--linear-1-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    transition: background .2s ease, transform .06s ease, box-shadow .2s ease;
+}
+
+.content-tarieven__button:hover {
+    background: var(--secondary-color);
+    color: #fff;
+    box-shadow: 0 8px 24px #999;
+}
+
+.content-tarieven__button:active {
+    transform: translateY(1px);
+}
+
+/* Spacing-tweaks wanneer cards in 3 kolommen staan */
+@media (max-width: 1024px) {
+
+    .content-tarieven__inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

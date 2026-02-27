@@ -1,0 +1,17 @@
+/**
+ * Styles for the Content Tekst block.
+ */
+
+
+.content-tekst__container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+
+
+.content-tekst__desc {
+    margin-top: 36px;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-keuringen",
+  "title": "Content Keuringen",
+  "description": "A custom content-keuringen block that uses ACF fields.",
+  "style": ["file:./content-keuringen.css"],
+  "script": ["file:./content-keuringen.js"],
+  "category": "inhoud",
+  "icon": "edit-page",
+  "keywords": ["text", "content", "content-keuringen"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-keuringen.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

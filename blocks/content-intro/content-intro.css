@@ -1,0 +1,165 @@
+/**
+ * Styles for the Content Tekst Afbeelding block.
+ */
+
+/* ================================
+   CONTENT TEKST AFBEELDING BLOCK
+   ================================ */
+
+
+
+.content-intro .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-intro__inner {
+    display: flex;
+    align-items: stretch;
+    gap: 90px;
+}
+
+/* --------------------------------
+   Afbeeldingskolom
+----------------------------------- */
+.content-intro__image {
+    flex: 1;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    /* zodat image altijd mooi staat */
+    max-width: 560px;
+    box-shadow:
+        0 8px 10px -6px rgba(0, 0, 0, 0.1),
+        0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* --------------------------------
+   Tekstkolom
+----------------------------------- */
+.content-intro__content {
+    flex: 1;
+    display: flex;
+    padding: 40px 0px;
+    /* justify-content: center; */
+    max-width: 550px;
+}
+
+.content-intro__title {
+    margin-top: 34px;
+}
+
+
+
+
+.content-intro__content-inner {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* voorkomt 100% breedte */
+
+}
+
+/* Titel */
+
+
+/* Tekst */
+.content-intro__text {
+    margin-top: 36px;
+    display: grid;
+    gap: 28px;
+}
+
+.content-intro__text p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* Button */
+
+
+.content-intro__button:hover {
+    background: #163b6d;
+}
+
+
+
+
+.is-style-large-text .content-tekst-afbeelding__text p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.is-style-small-text .content-tekst-afbeelding__text p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+/* --------------------------------
+   LAYOUT SCHAKELAAR (links/rechts)
+----------------------------------- */
+
+.layout-left .content-intro__image {
+    order: 1;
+}
+
+.layout-left .content-intro__content {
+    order: 2;
+}
+
+.layout-right .content-intro__image {
+    order: 2;
+}
+
+.layout-right .content-intro__content {
+    order: 1;
+}
+
+/* --------------------------------
+   Responsive
+----------------------------------- */
+
+
+
+@media (max-width: 1024px) {
+    .content-intro__inner {
+        gap: 30px;
+    }
+    .content-intro__inner {
+        padding:0px 20px;;
+    }
+
+
+}
+
+
+
+@media (max-width: 767px) {
+    .content-intro__inner {
+        flex-direction: column;
+    }
+
+    /* Op mobiel altijd afbeelding boven */
+    .content-intro__image {
+        order: 2 !important;
+        min-height: 360px;
+    }
+
+    .content-intro__content {
+        order: 1 !important;
+        padding: 0px;
+    }
+
+   
+}
+
+

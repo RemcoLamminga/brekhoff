@@ -1,5 +1,16 @@
 <?php
 
+
+
+add_action('init', function () {
+    $blocks = fetch_blocks(); // jouw eigen functie
+    error_log('BLOCK FOLDERS FOUND BY SCRIPT:');
+    foreach ($blocks as $b) {
+        error_log($b);
+    }
+});
+
+
 // Include necessary files for theme functionality.
 require get_parent_theme_file_path( 'includes/block-registration.php' );
 require get_parent_theme_file_path( 'includes/posttype-registration.php' );
@@ -23,6 +34,7 @@ function theme_setup() {
 		[
 			'header-menu'  => __( 'Header Menu' ),  // Header menu location.
 			'privacy-menu' => __( 'Privacy Menu' ),  // Privacy page menu location.
+			'footer-menu' => __( 'Footer Menu' ),  // Privacy page menu location.
 		]
 	);
 }
@@ -103,12 +115,16 @@ function theme_load_fonts() {
 	// );
 
 	// Registreer een Adobe Font
-	// wp_enqueue_style(
-	// 'adobe-typekit',
-	// 'https://use.typekit.net/xxxxxxxx.css',  // vervang xxxxxxx door jouw kit ID
-	// array(),
-	// null
-	// );
+	wp_enqueue_style(
+	'adobe-typekit',
+	'https://use.typekit.net/ecw6cfy.css',  // vervang xxxxxxx door jouw kit ID
+	array(),
+	null
+	);
 }
 add_action( 'wp_head', 'theme_load_fonts' );
 add_action( 'enqueue_block_editor_assets', 'theme_load_fonts' );
+
+
+
+	

@@ -1,0 +1,109 @@
+/**
+ * Styles for the Content Usp block.
+ */
+
+/* ================================
+   Content USP Block
+   ================================ */
+
+.content-usp {
+    text-align: center;
+    background: var(--background-color);
+}
+
+.content-usp .container {
+    max-width: 1240px;
+    padding: 40px 20px;
+}
+
+
+.content-usp__intro {
+    margin-top: 28px;
+}
+
+/* ================================
+   Grid
+   ================================ */
+
+.content-usp__grid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+}
+
+/* ================================
+   USP Item
+   ================================ */
+
+.content-usp__item {
+    text-align: center;
+
+}
+
+/* -------------------------------
+   Icon styling
+   ------------------------------- */
+
+.content-usp__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem auto;
+    border-radius: 999px;
+
+    /* Subtle gradient bubble */
+    background: linear-gradient(0deg, var(--linear-1-color) 0%, var(--linear-2-color) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-usp__icon svg,
+.content-usp__icon img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+/* -------------------------------
+   Title & text
+   ------------------------------- */
+
+.content-usp__item-title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0;
+    margin-top: 16px;
+    color: var(--text-color);
+}
+
+.content-usp__item-text {
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 1024px) {
+    .content-usp .container {
+        padding: 32px 20px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-usp__grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-usp__grid {
+        grid-template-columns: 1fr !important;
+    }
+}

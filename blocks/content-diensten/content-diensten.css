@@ -1,0 +1,102 @@
+/**
+ * Styles for the Content Diensten block.
+ */
+
+
+.content-diensten .container {
+    max-width: 100%;
+    padding: 40px 0px 80px;
+}
+
+
+
+.dienst-image img {
+    width: 435px;
+    height: 232px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+
+.diensten-list {
+    display: flex;
+    flex-direction: column;
+    /* gap: 40px; */
+}
+
+.dienst-item {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.dienst-item__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    gap: 90px;
+
+}
+
+.dienst-text p,
+.dienst-text .primary-button {
+    margin-top: 28px;
+}
+
+/* Tekst | Afbeelding */
+
+
+/* Afbeelding | Tekst */
+.dienst-item.layout-text-right {
+
+    background: rgba(224, 242, 254, 0.2);
+}
+
+
+.dienst-item.layout-text-left .dienst-item__inner {
+    flex-direction: row;
+}
+
+
+.dienst-item.layout-text-right .dienst-item__inner {
+    flex-direction: row-reverse;
+}
+
+
+@media (max-width: 1024px) {
+    .dienst-item__inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0px 20px;
+        max-width:100%;
+    }
+
+    .dienst-image {
+        order: 2;
+    }
+
+    .dienst-text {
+        order: 1;
+    }
+
+    .dienst-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-diensten .container {
+        padding: 0px !important;
+    }
+
+    .dienst-item {
+        padding: 32px 0px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .dienst-item__inner {
+        gap: 20px;
+    }
+}

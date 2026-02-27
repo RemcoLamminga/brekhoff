@@ -4,13 +4,13 @@
     "description": "A custom header block that uses ACF fields.",
     "style": [ "file:./header.css" ],
     "script": [ "file:./header.js" ],
-    "category": "formatting",
-    "icon": "star-filled",
+    "category": "header",
+    "icon": "align-full-width",
     "keywords": ["text", "content", "header"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "header.php",
-        "validate": "false"
+        "validate": false
     },
     "supports": {
         "anchor": true

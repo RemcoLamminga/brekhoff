@@ -1,0 +1,9 @@
+<?php
+/**
+ * Title: Contact
+ * Slug: brekhoff/contact
+ * Categories: categorie
+ */
+?>
+
+<!-- wp:acf/content-contact {"name":"acf/content-contact","data":{"content-contact_style":"none","_content-contact_style":"field_content-contact_style","content-contact_title":"Vraag een keuring aan of stel je vraag","_content-contact_title":"field_content-contact_title","content-contact_content":"Neem contact op voor een vrijblijvende offerte of om direct een keuring in te plannen. Je krijgt binnen 24 uur een reactie.","_content-contact_content":"field_content-contact_content","content-contact_form_shortcode":"[gravityform id=\u00221\u0022 title=\u0022false\u0022]","_content-contact_form_shortcode":"field_content-contact_form_shortcode","content-contact_show_contact_info":"1","_content-contact_show_contact_info":"field_content-contact_show_contact_info","content-contact_contact_title":"Direct contact","_content-contact_contact_title":"field_content-contact_contact_title","content-contact_phone":"06 - 12 34 56 78","_content-contact_phone":"field_content-contact_phone","content-contact_email":"info@brekhoff.nl","_content-contact_email":"field_content-contact_email","content-contact_emergency_title":"Spoedkeuring nodig?","_content-contact_emergency_title":"field_content-contact_emergency_title","content-contact_emergency_text":"Bij spoed of urgente keuringen kun je direct bellen. We schakelen snel en denken graag met je mee.","_content-contact_emergency_text":"field_content-contact_emergency_text","content-contact_emergency_phone":"Bel 06 - 12 34 56 78","_content-contact_emergency_phone":"field_content-contact_emergency_phone"},"mode":"preview"} /-->

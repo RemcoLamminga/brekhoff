@@ -102,8 +102,10 @@ function dz_input_to_button_with_icon( $button, $form ) {
 	$label = (string) $fragment->get_attribute( 'value' );
 
 	return sprintf(
-		'<button %s><span class="label">%s</span> <span class="icon" aria-hidden="true"></span></button>',
+		'<button %s><span class="label">%s</span> <span class="icon" aria-hidden="true"><img src="' . get_template_directory_uri() . '/assets/images/paper-plane-blue.png" alt="Arrow"></span></button>',
 		implode( ' ', $new_attributes ),
 		esc_html( $label )
 	);
 }
+
+

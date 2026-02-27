@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-tarieven",
+  "title": "Content Tarieven",
+  "description": "A custom content-tarieven block that uses ACF fields.",
+  "style": ["file:./content-tarieven.css"],
+  "script": ["file:./content-tarieven.js"],
+  "category": "inhoud",
+  "icon": "columns",
+  "keywords": ["text", "content", "content-tarieven"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-tarieven.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

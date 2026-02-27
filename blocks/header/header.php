@@ -2,18 +2,18 @@
 // Block name for field keys and classes.
 $block_name = 'header';
 
-// Check if preview mode is enabled.
-if ( ! empty( $block['data']['_is_preview'] ) ) {
-	// Get the current PHP file's URL for preview purposes.
-	$file = __DIR__; // Current PHP file, but can be any.
-	$url  = str_replace( WP_CONTENT_DIR, WP_CONTENT_URL, $file );
-	?>
-	<figure style="margin: 0; width: 100%; height: auto;">
-		<img src="<?php echo esc_url( $url . '/preview.jpg' ); ?>" alt="Preview of what the custom block appears minimized"
-			style="width: 100%; height: auto;">
-	</figure>
-	<?php
-} else {
+// Preview mode (Gutenberg inserter example).
+if (!empty($block['data']['_is_preview'])) {
+    $dir_path = __DIR__;
+    $url = str_replace(WP_CONTENT_DIR, WP_CONTENT_URL, $dir_path);
+    ?>
+    <figure style="margin: 0; width: 100%; height: auto;">
+        <img src="<?php echo esc_url($url . '/preview.jpg'); ?>"
+            alt="<?php echo esc_attr('Header block preview'); ?>" style="width: 100%; height: auto;" />
+    </figure>
+    <?php
+    return;
+}
 	?>
 	<section class="<?php echo esc_attr( $block_name ); ?>">
 		<div class="container">
@@ -49,10 +49,20 @@ if ( ! empty( $block['data']['_is_preview'] ) ) {
 						);
 					}
 					?>
+				<a href="/offerte" class="primary-button offerte">Offerte aanvragen
+					
+				</a>
+				</div>
+				<!-- Header actions -->
+				<div class="header-actions">
+
+					<!-- Hamburger menu button voor mobiel -->
+					<button class="hamburger-menu" aria-label="Open menu" aria-expanded="false">
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+					</button>
 				</div>
 			</div>
 		</div>
 	</section>
-	<?php
-}
-?>

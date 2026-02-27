@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-diensten",
+  "title": "Content Diensten",
+  "description": "A custom content-diensten block that uses ACF fields.",
+  "style": ["file:./content-diensten.css"],
+  "script": ["file:./content-diensten.js"],
+  "category": "inhoud",
+  "icon": "align-left",
+  "keywords": ["text", "content", "content-diensten"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-diensten.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

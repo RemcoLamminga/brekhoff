@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-intro",
+  "title": "Content Intro",
+  "description": "A custom content-intro block that uses ACF fields.",
+  "style": ["file:./content-intro.css"],
+  "script": ["file:./content-intro.js"],
+  "category": "inhoud",
+  "icon": "align-left",
+  "keywords": ["text", "content", "content-intro"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-intro.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

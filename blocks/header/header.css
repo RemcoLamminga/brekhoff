@@ -1,16 +1,32 @@
 /* Styles for the header block */
 /* Zorg ervoor dat de header zich goed uitstrekt over de breedte van de pagina */
+
+header.wp-block-template-part {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
+}
+
+.header .container {
+    padding: 21px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Logo aan de linkerkant */
 .logo a {
     display: block;
-    max-width: 200px;  /* Optioneel, stel een maximale breedte in voor het logo */
+    max-width: 200px;
+    /* Optioneel, stel een maximale breedte in voor het logo */
 }
 
 .site-logo img {
@@ -21,6 +37,10 @@
 /* Menu aan de rechterkant */
 .menu {
     text-align: right;
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    align-items: center;
 }
 
 .header-menu {
@@ -32,17 +52,343 @@
 
 .header-menu li {
     display: inline;
-    margin-left: 20px;  /* Ruimte tussen de menu-items */
+    margin-left: 24px;
+    /* Ruimte tussen de menu-items */
 }
 
 .header-menu a {
     text-decoration: none;
-    color: #333;  /* Zorg ervoor dat de tekstkleur zichtbaar is */
-    font-size: 16px;  /* Pas het lettertype aan */
-    font-weight: 600;  /* Optioneel, voor een iets vetter lettertype */
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
 }
 
 /* Hover-effect voor menu-items */
 .header-menu a:hover {
-    color: #0073e6;  /* Verander de kleur bij hover (gebruik een kleur die past bij jouw huisstijl) */
+    color: var(--linear-1-color);
+    /* Verander de kleur bij hover (gebruik een kleur die past bij jouw huisstijl) */
+}
+
+
+
+.menu li.current-menu-item>a,
+.menu li.current_page_item>a {
+    font-weight: 700;
+}
+
+
+.header .container .menu .primary-button {
+    margin-top: 0px;
+    padding: 8px 16px;
+    border-radius: 61px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.header .container .menu .primary-button:hover {
+    background: var(--linear-1-color);
+    color: var(--primary-color);
+}
+
+
+
+
+/* Hamburger menu button */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 110;
+}
+
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+/* Hamburger animatie naar X */
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (min-width: 1025px) {
+    .header-actions {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .menu {
+        gap: 10px;
+    }
+
+    .header .container {
+        padding: 20px 0px !important;
+    }
+
+    .left.hero--gap,
+    .left-hero--none {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .header {
+        padding: unset !important;
+    }
+
+    .header-actions .primary-button {
+        display: none;
+    }
+
+    .menu .header-menu-cta {
+        display: inline-flex;
+        width: -webkit-fill-available;
+        justify-content: center;
+        border-radius: unset;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .menu-home>a {
+        width: 14px;
+        height: 14px;
+        padding: 8px 16px 8px 12px !important;
+        margin-left: 10px;
+        margin-bottom: 16px;
+    }
+
+    .header_offerte-button {
+        display: none;
+    }
+
+    .header-topbar {
+        padding: 10px 20px;
+    }
+
+    .header-topbar-left {
+        display: none !important;
+    }
+
+    .header-content {
+        padding: 0px 24px;
+        position: relative;
+    }
+
+    .header-content .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        padding: 0;
+        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        z-index: 105;
+        display: grid;
+        justify-content: normal;
+
+    }
+
+    .header .container .menu .primary-button {
+        margin-left: 0px;
+        border-radius: 0;
+        background: var(--linear-1-color);
+        padding: 16px;
+        color: var(--primary-color);
+        font-size: 16px;
+    }
+
+    .header .container .menu .primary-button:hover {
+        background: var(--eyebrow-color);
+
+    }
+
+
+    .header-content .menu.active {
+        max-height: 500px;
+        overflow-y: scroll;
+    }
+
+    .header-content:has(.menu.active) {
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+
+    .header-content .menu .header-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .header-content .menu .header-menu li {
+        display: block;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .header-content .menu .header-menu li a {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 12px 20px 12px 16px;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .header-content .menu .header-menu li a:hover {
+        color: var(--linear-1-color);
+    }
+
+    .header-content .menu li.current-menu-item {
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    /* Sub-menu styles - Mobile */
+    .header-menu>li.menu-item-has-children,
+    .topbar-menu>li.menu-item-has-children {
+        position: relative;
+    }
+
+    .header-menu>li.menu-item-has-children>a,
+    .topbar-menu>li.menu-item-has-children>a {
+        display: flex;
+        align-items: baseline
+            /*center*/
+        ;
+    }
+
+    .header-menu>li.menu-item-has-children>a::after,
+    .topbar-menu>li.menu-item-has-children>a::after {
+        width: 8px;
+        height: 8px;
+        margin-left: 5px;
+        margin-right: auto;
+        flex-shrink: 0;
+    }
+
+    .header-menu .sub-menu,
+    .topbar-menu .sub-menu {
+        position: static;
+        transform: none;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        padding-left: 16px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+        transition: max-height 0.2s ease;
+    }
+
+
+    .header-menu .sub-menu {
+
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        /* haalt container padding weg */
+
+    }
+
+    .header-menu .sub-menu::before,
+    .topbar-menu .sub-menu::before {
+        display: none;
+    }
+
+    .header-menu>li.menu-item-has-children.submenu-open>.sub-menu,
+    .topbar-menu>li.menu-item-has-children.submenu-open>.sub-menu {
+        max-height: 500px;
+    }
+
+    .header-menu>li.menu-item-has-children:hover>.sub-menu,
+    .topbar-menu>li.menu-item-has-children:hover>.sub-menu {
+        max-height: 0;
+    }
+
+    .header-menu>li.menu-item-has-children.submenu-open:hover>.sub-menu,
+    .topbar-menu>li.menu-item-has-children.submenu-open:hover>.sub-menu {
+        max-height: 500px;
+    }
+
+    .header-menu .sub-menu li a,
+    .topbar-menu .sub-menu li a {
+        padding: 10px 20px 10px 40px !important;
+        font-size: 15px;
+    }
+
+    .header-menu li>.sub-menu a {
+
+        line-height: 1.2;
+    }
+
+    .header-topbar-right {
+        width: 100%;
+    }
+
+    .header-topbar-right .topbar-menu .menu-item.wpml-ls-item {
+        margin-left: auto;
+    }
+
+    .topbar-menu>li.menu-item-has-children>a {
+        justify-content: flex-end;
+    }
+
+    .topbar-menu>li.menu-item-has-children>a::after {
+        margin-left: 10px;
+    }
+
+    .menu.active .primary-button {
+        margin: 0 !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo a {
+        max-width: 150px;
+    }
+
+    .header-content {
+        padding: 0px;
+    }
+
+    .header .container {
+        padding: 16px 24px !important;
+    }
+
 }

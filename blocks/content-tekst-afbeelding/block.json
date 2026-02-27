@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-tekst-afbeelding",
+  "title": "Content Tekst Afbeelding",
+  "description": "A custom content-tekst-afbeelding block that uses ACF fields.",
+  "style": ["file:./content-tekst-afbeelding.css"],
+  "script": ["file:./content-tekst-afbeelding.js"],
+  "category": "inhoud",
+  "icon": "align-right",
+  "keywords": ["text", "content", "content-tekst-afbeelding"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-tekst-afbeelding.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

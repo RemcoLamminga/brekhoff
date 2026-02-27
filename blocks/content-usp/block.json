@@ -1,0 +1,26 @@
+{
+  "name": "acf/content-usp",
+  "title": "Content Usp",
+  "description": "A custom content-usp block that uses ACF fields.",
+  "style": ["file:./content-usp.css"],
+  "script": ["file:./content-usp.js"],
+  "category": "inhoud",
+  "icon": "star-filled",
+  "keywords": ["text", "content", "content-usp"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-usp.php",
+    "validate": false
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "_is_preview": true
+      }
+    }
+  }
+}

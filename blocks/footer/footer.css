@@ -1,46 +1,254 @@
 /* Styles for the footer block */
 
-/* Minimalistische footer styling */
-.footer-text {
-    text-align: center;
-    margin-bottom: 20px;
+
+.footer {
+    width: 100%;
+    display: block;
+    background: linear-gradient(275deg, #032B49, #034A7A);
+    color: #ffffff;
+
 }
 
-.social-links {
-    text-align: center;
-    margin-bottom: 20px;
+.footer .container {
+    max-width: 1280px;
+    padding: 80px 20px;
 }
 
-.social-links a {
-    margin: 0 10px;
-    font-size: 24px;  /* Pas de grootte van de iconen aan */
-    color: #333;      /* Kleur voor de iconen */
+/* Container */
+.footer__container {
+    /* width: 100%; */
 }
 
-.contact-info {
-    text-align: center;
-    margin-bottom: 20px;
+/* ----------------------------------------------
+   TOP SECTION (logo + menu left, text + button right)
+---------------------------------------------- */
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.footer-links {
-    text-align: center;
+/* LEFT SIDE */
+.footer__left {
+    flex: 1 1 300px;
 }
 
-.footer-links ul {
+.footer__logo img {
+    display: block;
+    height: auto;
+    max-width: 180px;
+}
+
+/* Footer navigation */
+.footer__menu {
+    margin-top: 32px;
+}
+
+.footer__menu-list {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 32px;
 }
 
-.footer-links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.footer-links a {
+.footer__menu-list a {
+    color: #ffffff;
     text-decoration: none;
-    color: #333;
+    transition: opacity 0.2s ease;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0;
 }
 
-.footer-links a:hover {
-    color: #0073e6;  /* Hover kleur voor de links */
+.footer__menu-list a:hover {
+    color: var(--linear-1-color);
+}
+
+/* ----------------------------------------------
+   RIGHT SIDE
+---------------------------------------------- */
+
+.footer__right {
+    max-width: 345px;
+}
+
+.footer__text {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 600;
+    font-family: var(--tarif-font);
+
+}
+
+/* Buttons wrapper */
+.footer__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Button styling */
+.footer__button.primary-button {
+    margin-top: 16px;
+    font-weight: 500;
+    background: var(--eyebrow-color);
+    color: var(--primary-color);
+    transition: background 0.2s ease;
+}
+
+.footer__button.primary-button:hover {
+    background: var(--linear-1-color);
+}
+
+.footer__button.primary-button .btn-arrow {
+    width: 16px;
+
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    /* optisch uitgelijnd met de tekst */
+    position: relative;
+    top: 0.5px;
+    /* optische fine‑tune (optioneel) */
+
+}
+
+
+
+/* ----------------------------------------------
+   DIVIDER
+---------------------------------------------- */
+
+.footer__divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    margin: 80px 0 32px;
+}
+
+/* ----------------------------------------------
+   BOTTOM SECTION (privacy menu + credits)
+---------------------------------------------- */
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Privacy menu */
+.footer__privacy-menu {
+    flex: 1 1 auto;
+}
+
+.footer__privacy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.footer__privacy-list a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.footer__privacy-list a:hover {
+    color: var(--linear-1-color);
+}
+
+/* Credits */
+.footer__credits {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    text-align: right;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.footer__credits-link {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.footer__credits-link:hover {
+    color: var(--linear-1-color);
+}
+
+/* ----------------------------------------------
+   RESPONSIVE
+---------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .footer__menu-list {
+        gap: 16px;
+    }
+
+    .footer__container {
+        padding: 0px 20px;
+    }
+
+    .footer__top,
+    .footer__bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+
+     .footer__credits {
+        text-align: left;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .footer__left,
+    .footer__right {
+        flex-basis: auto;
+    }
+
+    .footer__top {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer__menu-list,
+    .footer__privacy-list {
+        display: block;
+    }
+
+    .footer__button.primary-button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .footer__divider {
+        margin: 40px 0 16px;
+    }
+
+    .footer__top,
+    .footer__bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+
+   
 }

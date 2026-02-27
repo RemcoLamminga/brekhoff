@@ -1,36 +1,61 @@
 /*
-Theme Name: Donderz WP Starter
-Theme URI: https://donderz.nl
+Theme Name: Brekhoff
+Theme URI: https://brekhoff.nl
 Author: Donderz
 Author URI: https://donderz.nl
 Description: Een basis thema voor WordPress met Gutenberg-blokken uitgeschakeld
-Version: 1.0
-Requires at least: 6.7
-Tested up to: 6.9
-Requires PHP: 8.4
+Version: 1.0.1
+
 */
 
-:root{
-    --primary-color: #2C6B4D;
-    --eyebrow-color: #7FC474;
-    --background-color: #F3F6F7;
-    --text-color: #fff;
-    --font-family: 'Arial', sans-serif;
-    --heading-font: 'Arial', sans-serif;
+:root {
+    --primary-color: #01427A;
+    --secondary-color: #032B49;
+    --highlight-color: #085A96;
+    --linear-1-color: #30E282;
+    --linear-2-color: #032B49;
+    --eyebrow-color: #E0F2FE;
+    --background-color: rgba(224, 242, 254, 0.2);
+    --background-color-full: rgba(224, 242, 254, 1);
+    --text-color: #032B49;
+    --font-family: 'Nunito', sans-serif;
+    --heading-font: 'Nunito', sans-serif;
+    --tarif-font: 'roboto', sans-serif;
 }
 
-body{
-    margin: 0!important;
+body {
+    margin: 0 !important;
     font-family: var(--font-family);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
-.container{
+.container {
     max-width: 1440px;
-    padding: 0 20px;
+    padding: 80px 0px;
     margin: 0 auto;
 }
 
-.button{
+/* Eyebrow */
+.eyebrow {
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--eyebrow-color);
+    color: var(--primary-color);
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    width: auto;
+    letter-spacing: 0;
+
+}
+
+
+
+
+
+.button {
     padding: 15px 32px;
     border-radius: 99px;
     font-size: 18px;
@@ -38,31 +63,324 @@ body{
     text-decoration: unset;
 }
 
-.primary-button{
+.primary-button {
     color: #fff;
-    background: linear-gradient(90deg, #D05242 0%, #E49511 100%);
+    /* background: linear-gradient(90deg, #D05242 0%, #E49511 100%); */
 }
 
-h1, h2, h3, h4, h5, h6{
+p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: var(--text-color);
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--heading-font);
     margin: 0;
+    color: var(--text-color);
+}
+
+
+h1 {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 0;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0;
+
+
+}
+
+
+h3 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+    font-weight: 800;
+
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-weight: 800;
 }
 
 .skip-to-content {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	padding: 0.75rem 1rem;
-	background: #eee;
-	color: #0e0e0e;
-	text-decoration: none;
-	font-weight: 400;
-	transform: translateY(-120%);
-	/* transition: transform 0.2s ease; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background: #eee;
+    color: #0e0e0e;
+    text-decoration: none;
+    font-weight: 400;
+    transform: translateY(-120%);
+    /* transition: transform 0.2s ease; */
 }
 
 .skip-to-content:focus,
 .skip-to-content:focus-visible {
-	transform: translateY(0);
+    transform: translateY(0);
+}
+
+
+.primary-button {
+    align-items: center;
+    display: inline-flex;
+    padding: 10px 30px;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 90px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background .2s;
+    margin-top: 35px;
+    gap: 14px;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.primary-button:hover {
+    background-color: var(--primary-color);
+
+}
+
+.primary-button .btn-arrow {
+    transition: transform 0.3s ease;
+    width: 16px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 0.5px;
+}
+
+.primary-button:hover .btn-arrow {
+    transform: translateX(6px);
+}
+
+
+
+
+/****************/
+/* Grafity Form */
+/****************/
+
+h2.gform_title {
+    display: none;
+}
+
+.gform-theme--foundation .gform_fields {
+    row-gap: 20px;
+}
+
+
+.gform_wrapper input::placeholder,
+.gform_wrapper textarea::placeholder {
+    color: #737373;
+    opacity: 1;
+    /* Safari fix */
+    font-size: 14px !important;
+    line-height: 100%;
+}
+
+
+.gform-field-label.gfield_label {
+    color: var(--secondary-color) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    font-family: var(--font-family) !important;
+    line-height: 14px !important;
+    letter-spacing: 0 !important;
+    margin-bottom: 8px;
+}
+
+/* .gform_wrapper textarea {
+    color: rgba(0,0,0,0.6);
+    font-weight: 300 !important;
+    font-size: 16px !important;
+    font-family: var(--font-family) !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+
+} */
+
+/* .gform-field-label {
+    color: rgba(0,0,0,1) !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+    font-family: var(--font-family) !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+} */
+
+.gform_wrapper select {
+    padding: 10px !important;
+}
+
+
+
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="tel"],
+.gform_wrapper textarea,
+.gform_wrapper select {
+    background-color: rgba(229, 229, 229, 0.3);
+    border: 1px solid #E5E5E5;
+    border-radius: 6.8px;
+    /* padding:12px; */
+    box-shadow: none !important;
+    padding: 4px 12px;
+    font-size: 14px !important;
+    line-height: 100%;
+    color: #737373;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+
+.gform_wrapper select {
+    height: 42px !important;
+    min-height: 42px !important;
+    resize: vertical;
+}
+
+.gform_wrapper .gform_button,
+.gform_wrapper input.button {
+    background-color: var(--linear-1-color) !important;
+    border-radius: 299px !important;
+    color: var(--primary-color) !important;
+    cursor: pointer;
+    font-size: 18px !important;
+    padding: 10px !important;
+    transition: all .3s ease-in-out;
+    /* width: 100%; */
+    border: unset !important;
+    align-items: center !important;
+    line-height: 28px !important;
+    display: inline-flex !important;
+    gap: 14px !important;
+}
+
+
+.gform_wrapper .gform_submit_button {
+    background-color: var(--linear-1-color) !important;
+}
+
+
+.gform_wrapper .gform_button:hover,
+.gform_wrapper input.button:hover,
+.gform_wrapper .gform_submit_button:hover {
+    /* transform: translateY(-1px); */
+
+    background-color: var(--eyebrow-color) !important;
+
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+
+
+}
+
+
+.gform_wrapper .gform_button[type="submit"] .icon {
+    width: 16px;
+    height: 16px;
+    -webkit-mask-image: url("/wp-content/themes/brekhoff/assets/images/paper-plane-blue.png");
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    mask-image: url("/wp-content/themes/brekhoff/assets/images/paper-plane-blue.png");
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    line-height: 1;
+    /* kleur van je icoon: */
+    background: #fff;
+}
+
+
+
+.gform_footer {
+    justify-content: flex-end !important;
+    margin-block-start: 20px !important;
+}
+
+
+.gform_wrapper .gform_footer .button {
+    width: 100% !important;
+    display: block;
+}
+
+.charleft.ginput_counter.gfield_description {
+    display: none;
+}
+
+/* Extra kleine textarea */
+.textarea-xs textarea {
+    height: 64px !important;
+    /* kleiner dan GF small textarea */
+    min-height: 64px !important;
+    resize: vertical;
+    /* of none als je geen resize wilt */
+}
+
+@media (max-width:1024px) {
+    .container {
+        padding: 32px 0px !important;
+    }
+
+    body,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+
+    h1 {
+        font-size: 48px !important;
+    }
+
+    h2 {
+        font-size: 32px !important;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+
+
+
 }

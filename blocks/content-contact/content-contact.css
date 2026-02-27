@@ -1,0 +1,360 @@
+/**
+ * Styles for the Content Contact block.
+ */
+
+/* ================================
+   CONTENT CONTACT BLOCK (no c- prefix)
+   ================================ */
+
+.content-contact {}
+
+
+
+.content-contact--dark {
+    background: linear-gradient(284.22deg, #032B49 34.18%, #0C426B 100%);
+    color: #ffffff;
+}
+
+.content-contact--dark p,
+.content-contact--dark .content-contact__title,
+.content-contact--dark .content-contact__intro,
+.content-contact--dark .content-contact__panel-title,
+.content-contact__panel--emergency h4.content-contact__panel-title,
+.content-contact__panel--emergency .content-contact__panel-text p {
+    color: #ffffff;
+}
+
+.content-contact--dark a {
+    color: #ffffff;
+}
+
+
+
+
+/* item spacing */
+.content-contact__item {
+    /* margin-bottom: 8px; */
+    list-style: none;
+    margin-top: 12px;
+
+}
+
+/* REGEL 1: icoon + label */
+.contact-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+}
+
+/* icoon links */
+.contact-info-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    margin-top: 4px;
+}
+
+/* label */
+.contact-info-label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+/* REGEL 2: telefoonnummer / email */
+.content-contact__item>.content-contact__link {
+    display: block;
+    padding-left: 34px;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 6px;
+    color: var(--primary-color);
+}
+
+.content-contact--dark .content-contact__item>.content-contact__link {
+    color: var(--linear-1-color);
+}
+
+.content-contact__item>.content-contact__link:hover,
+.content-contact--dark .content-contact__item>.content-contact__link:hover {
+    text-decoration: underline;
+}
+
+/* DARK THEME ICONS */
+.content-contact--dark .contact-info-phone .contact-info-icon {
+    background-image: url("/wp-content/themes/brekhoff/assets/images/phone-white.svg");
+}
+
+.content-contact--dark .contact-info-email .contact-info-icon {
+    background-image: url("/wp-content/themes/brekhoff/assets/images/email-white.svg");
+}
+
+/* LIGHT THEME ICONS */
+.content-contact--none .contact-info-phone .contact-info-icon {
+    background-image: url("/wp-content/themes/brekhoff/assets/images/phone.svg");
+}
+
+.content-contact--none .contact-info-email .contact-info-icon {
+    background-image: url("/wp-content/themes/brekhoff/assets/images/email.svg");
+}
+
+
+
+
+
+
+
+
+
+/* WRAPPER */
+.content-contact__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+/* HEADER */
+.content-contact__header {
+    text-align: center;
+    max-width: 655px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-contact__title {
+    max-width: 647px;
+}
+
+.content-contact__intro {
+    margin-top: 20px;
+}
+
+/* GRID */
+.content-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 100px;
+    margin-top: 64px;
+}
+
+
+/* Wanneer contact info UIT staat → één kolom + form centreren */
+.content-contact__grid--single {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    /* centreert de kolom */
+}
+
+/* Form breedte beperken als het gecentreerd staat */
+.content-contact__grid--single .content-contact__form {
+    max-width: calc(749px - 80px);
+    width: 100%;
+}
+
+
+@media (max-width: 1024px) {
+    .content-contact__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: center;
+        padding: 0px 20px;
+    }
+}
+
+/* FORM */
+.content-contact__form {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    max-width: calc(749px - 80px);
+}
+
+@media (max-width: 1024px) {
+    .content-contact__form {
+        padding: 1rem;
+        width: 100%;
+       
+    }
+}
+
+.content-contact__form--placeholder {
+    padding: 1rem;
+    border: 2px dashed #c5cedb;
+    border-radius: 14px;
+    font-style: italic;
+    text-align: center;
+    color: #6b788c;
+}
+
+/* SIDEBAR */
+.content-contact__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* PANELS */
+
+
+.content-contact__panel--emergency {
+    background: var(--secondary-color);
+    color: #ffffff;
+    padding: 24px 24px 28px;
+    border-radius: 16px;
+}
+
+.content-contact__panel--emergency .content-contact__panel-text {
+    margin-top: 12px;
+}
+
+
+/* LIST */
+.content-contact__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+/* .content-contact__list li+li {
+    margin-top: 8px;
+} */
+
+/* .content-contact__item {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+} */
+
+/* ICON WRAPPER (no icon graphic here) */
+/* .content-contact__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+/* LINKS */
+/* .content-contact__link {
+    text-decoration: none;
+    font-weight: 500;
+} */
+
+/* .content-contact__link:hover {
+    text-decoration: underline;
+} */
+
+/* EMERGENCY CTA */
+.content-contact__emergency-cta {
+    margin-top: 16px;
+}
+
+.content-contact__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: transparent;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 90px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    transition: background .2s;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: var(--font-family);
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+/* .content-contact__button:hover {
+    background: var(--eyebrow-color);
+}
+
+.content-contact__button img {
+    transition: transform 0.3s ease;
+}
+
+.content-contact__button img:hover {
+    transform: translateX(6px);
+} */
+
+.content-contact__button--phone {
+    background: transparent;
+}
+
+.content-contact__button--phone:hover {
+    background: var(--primary-color);
+}
+
+.content-contact__button:hover .btn-arrow {
+    transform: translateX(6px);
+}
+
+.content-contact__button .btn-arrow {
+    transition: transform 0.3s ease;
+    width: 16px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 0.5px;
+}
+
+
+@media (max-width:1024px) {
+    .content-contact__panel--emergency {
+        max-width: 350px;
+    }
+
+    .content-contact__item>.content-contact__link {
+        padding-left: 0px;
+    }
+
+    .content-contact__panel.content-contact__panel--contact {
+        text-align: center;
+    }
+
+    .content-contact__sidebar {
+        gap: 32px;
+    }
+
+    .contact-info-row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-contact__grid {
+        margin-top: 32px;
+        justify-items: center;
+        padding: 0px;
+    }
+    .content-contact__form {
+        padding: 20px;
+        width: auto;
+    }
+
+    .content-contact__item>.content-contact__link {
+        padding-left: 34px;
+    }
+
+    .content-contact__panel.content-contact__panel--contact {
+        text-align: left;
+    }
+
+    .contact-info-row {
+        justify-content: left;
+    }
+
+}
