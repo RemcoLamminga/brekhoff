@@ -49,8 +49,8 @@
 
 /* icoon links */
 .contact-info-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     display: block;
     flex-shrink: 0;
     background-repeat: no-repeat;
@@ -167,6 +167,7 @@
         gap: 2rem;
         justify-items: center;
         padding: 0px 20px;
+        margin-top: 32px;
     }
 }
 
@@ -183,7 +184,7 @@
     .content-contact__form {
         padding: 1rem;
         width: 100%;
-       
+
     }
 }
 
@@ -269,7 +270,7 @@
     border-radius: 90px;
     text-decoration: none;
     border: 1px solid #fff;
-    transition: background .2s;
+    transition: background .4s;
     font-weight: 400;
     font-size: 16px;
     font-family: var(--font-family);
@@ -313,6 +314,10 @@
 
 
 @media (max-width:1024px) {
+    .content-contact--dark .content-contact__panel--emergency {
+        background: var(--highlight-color);
+    }
+
     .content-contact__panel--emergency {
         max-width: 350px;
     }
@@ -340,6 +345,7 @@
         justify-items: center;
         padding: 0px;
     }
+
     .content-contact__form {
         padding: 20px;
         width: auto;

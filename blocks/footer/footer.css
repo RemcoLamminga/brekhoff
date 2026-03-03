@@ -58,7 +58,7 @@
 .footer__menu-list a {
     color: #ffffff;
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    transition: color 0.3s ease;
     font-size: 15px;
     font-weight: 800;
     line-height: 28px;
@@ -100,7 +100,7 @@
     font-weight: 500;
     background: var(--eyebrow-color);
     color: var(--primary-color);
-    transition: background 0.2s ease;
+    transition: background 0.4s ease;
 }
 
 .footer__button.primary-button:hover {

@@ -63,6 +63,7 @@ header.wp-block-template-part {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0;
+    transition: color 0.2s ease;
 }
 
 /* Hover-effect voor menu-items */

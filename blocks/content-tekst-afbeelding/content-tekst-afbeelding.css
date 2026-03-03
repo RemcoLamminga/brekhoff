@@ -36,9 +36,9 @@
     border-radius: 16px;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 450px;
+    /* min-height: 450px; */
     /* zodat image altijd mooi staat */
-    max-width: 560px;
+    /* max-width: 560px; */
     box-shadow:
         0 8px 10px -6px rgba(0, 0, 0, 0.1),
         0 20px 25px -5px rgba(0, 0, 0, 0.1);
@@ -106,9 +106,13 @@
 ----------------------------------- */
 
 @media (max-width: 1024px) {
+
+    .layout-left .content-tekst-afbeelding__content {
+        max-width:100%;
+    }
     .content-tekst-afbeelding__inner {
         flex-direction: column;
-        gap: 30px;
+        gap: 32px;
         padding: 0px 20px;
     }
 
@@ -117,22 +121,37 @@
         order: 2 !important;
         min-height: 360px;
     }
+    .layout-left .content-tekst-afbeelding__image,
+    .layout-right .content-tekst-afbeelding__image {
+        max-width: 100% ;
+    }
 
     .content-tekst-afbeelding__content {
         order: 1 !important;
         padding:0px;
+        
     }
 
     
 }
 
+@media (max-width: 767px) {
+    .content-tekst-afbeelding__text,
+    .content-tekst-afbeelding__title  {
+        margin-top:16px;
+    }
+
+    .content-tekst-afbeelding__button.primary-button {
+        margin-top: 16px;
+    }
+}
 
 @media (max-width: 600px) {
-    .content-tekst-afbeelding__title {
+    /* .content-tekst-afbeelding__title {
         font-size: 26px;
     }
 
     .content-tekst-afbeelding__text {
         font-size: 16px;
-    }
+    } */
 }

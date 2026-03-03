@@ -96,7 +96,7 @@
     border-radius: 60px;
     font-size: 18px;
     text-decoration: none;
-    transition: background .2s;
+    transition: background .4s;
     width: fit-content;
     gap: 14px;
     line-height: 28px;
@@ -107,9 +107,9 @@
 
 
 .hero__button.secondary-button:hover {
-    background: var(--eyebrow-color);
+    background: #fff;
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    
 }
 
 .hero__button.secondary-button .btn-arrow {
@@ -215,9 +215,7 @@
 
 
 @media (max-width: 1024px) {
-    .hero__buttons__inner {
-        display: grid;
-    }
+   
 
     .hero .hero-content__container {
         grid-template-columns: 1fr;
@@ -272,4 +270,10 @@
     .hero .hero-content__container {
         padding: 0px 20px;
     }
+
+     .hero__buttons__inner {
+        display: grid;
+    }
+
+    
 }

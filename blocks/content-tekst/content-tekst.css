@@ -6,12 +6,19 @@
 .content-tekst__container {
     padding-left: 20px;
     padding-right: 20px;
-    max-width:1200px;
-    margin:0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
 
 .content-tekst__desc {
     margin-top: 36px;
+}
+
+
+@media (max-width:767px) {
+    .content-tekst__desc {
+        margin-top: 20px;
+    }
 }
