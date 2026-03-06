@@ -4,7 +4,7 @@ Theme URI: https://brekhoff.nl
 Author: Donderz
 Author URI: https://donderz.nl
 Description: Een basis thema voor WordPress met Gutenberg-blokken uitgeschakeld
-Version: 1.0.3
+Version: 1.0.5
 
 */
 
@@ -375,18 +375,22 @@ h2.gform_title {
 
     h1 {
         font-size: 48px !important;
+        line-height: 48px;
     }
 
     h2 {
         font-size: 32px !important;
+        line-height: 36px;
     }
 
     h3 {
         font-size: 22px;
+        line-height: 30px;
     }
 
     h4 {
         font-size: 20px;
+        line-height: 28px;
     }
 
 

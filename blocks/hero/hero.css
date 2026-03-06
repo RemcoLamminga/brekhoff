@@ -96,7 +96,7 @@
     border-radius: 60px;
     font-size: 18px;
     text-decoration: none;
-    transition: background .4s;
+    transition: background .4s ease, color .4s ease;
     width: fit-content;
     gap: 14px;
     line-height: 28px;
@@ -274,6 +274,12 @@
      .hero__buttons__inner {
         display: grid;
     }
+
+    .hero .hero-content__container .left .title,
+    .hero .hero-content__container .left .desc {
+        margin-top:14px
+    }
+
 
     
 }

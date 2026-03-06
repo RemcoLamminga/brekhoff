@@ -160,7 +160,7 @@
 .footer__privacy-list a {
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    transition: color 0.3s ease;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0;
@@ -206,10 +206,16 @@
     .footer__top,
     .footer__bottom {
         display: grid;
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
     }
 
-     .footer__credits {
+    .footer__privacy-list {
+        display:grid;
+        gap: 0;
+    }
+
+    .footer__credits {
         text-align: left;
     }
 }
@@ -248,7 +254,7 @@
         display: grid;
         grid-template-columns: 1fr;
     }
-    
 
-   
+
+
 }

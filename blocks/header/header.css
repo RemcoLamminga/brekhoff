@@ -88,6 +88,7 @@ header.wp-block-template-part {
     line-height: 20px;
     letter-spacing: 0;
     font-weight: 500;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 .header .container .menu .primary-button:hover {
@@ -263,7 +264,8 @@ header.wp-block-template-part {
         display: flex;
         justify-content: space-between;
         position: relative;
-        padding: 12px 20px 12px 16px;
+        padding: 12px 24px 12px 24px;
+       
         font-size: 16px;
         color: #fff;
     }
@@ -388,7 +390,7 @@ header.wp-block-template-part {
         padding: 0px;
     }
 
-    .header .container {
+    .header .container .header-content {
         padding: 16px 24px !important;
     }
 

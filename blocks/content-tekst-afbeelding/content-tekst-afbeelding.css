@@ -107,7 +107,8 @@
 
 @media (max-width: 1024px) {
 
-    .layout-left .content-tekst-afbeelding__content {
+    .layout-left .content-tekst-afbeelding__content,
+    .layout-right .content-tekst-afbeelding__content  {
         max-width:100%;
     }
     .content-tekst-afbeelding__inner {

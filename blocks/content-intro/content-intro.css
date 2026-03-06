@@ -139,6 +139,7 @@
     }
 
 
+
 }
 
 
@@ -159,7 +160,10 @@
         padding: 0px;
     }
 
-   
+    .content-intro__content,
+    .content-intro__image  {
+        max-width:100%;
+    }
 }
 
 
